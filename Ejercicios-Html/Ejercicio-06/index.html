@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio-06</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        fieldset {
+            width: 40%;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            padding: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        select, input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .boton {
+            width: 100%;
+        }
+
+        .pro {
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+            gap: 5px;
+        }
+
+        .pro input {
+            width: unset;
+            padding: unset;
+            margin-bottom: unset;
+        }
+
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Registro Develhope</h1>
+
+    <form action="/procesar_registro" method="get">
+
+      <!-- Datos Personales -->
+      <fieldset style="margin-left: 20px; width: 300px;">
+        <legend>Datos Personales</legend>
+
+        <!-- Nombre Completo -->
+        <label for="nombre">Nombre y Apellidos:</label>
+        <input type="text" id="nombre" name="nombre-completo" placeholder="Juan Muñoz" minlength="2" required/><br><br>
+
+        <!-- Correo -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="correo" placeholder="ejemplo@gmail.com" required/><br><br>
+
+        <!-- Fecha de Nacimiento -->
+        <label for="fecha">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha" name="fecha-nacimiento" required/><br /><br />
+
+        <!-- Número de Teléfono -->
+        <label for="phone-mask">Número de Teléfono:</label>
+        <input id="phone-mask" name="tel-numero" placeholder="612 345 789" required/><br><br>
+
+        <!-- Contraseña -->
+        <label for="clave">Contraseña:</label>
+        <input type="password" id="clave" name="contrasena" min="5" required/><br /><br />
+
+      </fieldset>
+
+      <!-- Métodos de Pago -->
+      <fieldset style="width: 400px;">
+      <legend>Métodos de Pago</legend>
+
+        <!-- Selección de Planes -->
+        <label for="planes">Selecciona un plan:</label>
+        <select id="planes" name="plans" required>
+            <option value="default">---selecciona---</option>
+            <option value="gratis">Plan Gratuito</option>
+            <option value="plan1">Plan 1 - Precio 40€</option>
+            <option value="plan2">Plan 2 - Precio 80€</option>
+            <option value="plan3">Plan 3 - Precio 100€</option>
+        </select>
+        
+        <!-- Checkbox para el Plan Pro -->
+        <div class="pro">
+            <input type="checkbox" id="proPlan" name="proPlan" />
+            <label for="proPlan" id="proPlanLabel">Plan Pro</label><br>
+        </div>
+
+        <!-- Número de Tarjeta de Crédito -->
+        <label for="card-mask">Número de Tarjeta de Crédito:</label>
+        <input id="card-mask" name="creditCard" placeholder="1234 5678 9012 3456" required />
+            
+        <!-- CVC -->
+        <label for="CVC-mask">CVC:</label>
+        <input id="CVC-mask" name="cvc" placeholder="123" required /><br><br>
+
+        <!-- Fecha de Expiración -->
+        <label for="date-mask">Fecha de Expiración:</label>
+        <input id="date-mask" name="expirationDate" placeholder="MM/AA" required /><br><br>
+
+        <!-- Dirección de Facturación -->
+        <label for="direccion">Dirección de Facturación:</label>
+        <textarea id="direccion" name="direccion-pago" rows="1" column="5" placeholder="Plaça de John Lennon 15, Barcelona, España" required></textarea>
+      </fieldset>
+      
+      <!-- Botón de Envío -->
+      <div class="boton">
+      <button type="submit" style="margin-left: 20px; padding: 10px;">Registrarse</button>
+      </div>
+
+    </form>
+
+    <script>
+        IMask(
+            document.getElementById('phone-mask'),
+            {
+                mask: '+{34} 000 000 000'
+            }
+            )
+
+            IMask(
+            document.getElementById('date-mask'),
+            {
+                mask: '00/00'
+            }
+            )
+
+            IMask(
+            document.getElementById('CVC-mask'),
+            {
+                mask: '000'
+            }
+            )
+
+            IMask(
+            document.getElementById('card-mask'),
+            {
+                mask: '0000 0000 0000 0000'
+            }
+            )
+
+    </script>
+
+  </body>
+</html>

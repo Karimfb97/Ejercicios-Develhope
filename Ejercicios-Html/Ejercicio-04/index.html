@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio-04</title>
+    <!-- javascript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var opciones = document.querySelector('.dropdown');
+            opciones.addEventListener("mouseover", function () {
+                opciones.children[1].style.display = "block";
+                opciones.children[1].style.opacity = 1;
+                opciones.children[1].style.transform = "translateY(6px)";
+            });
+            opciones.addEventListener("mouseout", function () {
+                opciones.children[1].style.opacity = 0;
+                opciones.children[1].style.transform = "translateY(0px)";
+                setTimeout(() => {
+                    opciones.children[1].style.display = "none";
+                }, 200);
+            });
+        });
+    </script>
+</head>
+<body style="background-color: #3b3e43; margin: 0;">
+    <!-- barra -->
+    <nav style="background-color: #222529; color: #9B9C9F; padding: 10px; display: flex; justify-content: space-between; align-items: center; font-family: 'Arial', sans-serif; margin: 0;">
+        <!-- logo -->
+        <div class="logo" style="color: white; margin-left: 90px; font-size: 18px; font-weight: 600;">Navbar</div>
+        <!-- categorias -->
+        <div class="categorias" style="display: flex; gap: 30px; flex-grow: 1; justify-content: center; align-items: center;">
+            <a href="#" style="color: white; text-decoration: none; font-weight: 500; font-size: 16px;">Home</a>
+            <a href="#" style="color: grey; text-decoration: none; font-weight: 500; font-size: 16px;">Link</a>
+            <!-- dropdown -->
+            <div class="dropdown" style="display: inline-block; position: relative;">
+                <a href="#" style="color: grey; text-decoration: none; font-weight: 500; font-size: 16px;">Dropdown <span style="font-size: 12px; vertical-align: middle;">&#9660;</span></a>
+                <!-- opciones -->
+                <div style="display: none; position: absolute; top: 120%; left: 0; background-color: white; padding: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); min-width: 120px; opacity: 0; transform: translateY(0); transition: opacity 0.2s, transform 0.2s;">
+                    <a href="#" style="color: grey; text-decoration: none; display: block; margin-top: 5px; font-size: 14px;">Opción A</a>
+                    <a href="#" style="color: grey; text-decoration: none; display: block; margin-top: 5px; font-size: 14px;">Opción B</a>
+                </div>
+            </div>
+            <a href="#" style="color: #5A5C5F;  text-decoration: none; font-weight: 500; font-size: 16px;" disabled>Disabled</a>
+        </div>
+
+        <!-- buscar -->
+        <div class="busqueda" style="margin-right: 90px;">
+            <form>
+                <input type="text" placeholder="Search" style="border: 1px solid #CFD5D9; border-radius: 5px; padding: 10px; color: #6E757D; font-size: 14px;">
+                <button type="button" onclick="buscar()" style="border: 1px solid #408458; border-radius: 5px; background-color: #222529; padding: 10px; color: #408458; cursor: pointer; font-size: 14px;">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!-- línea blanca separa la barra del resto de la página -->
+    <div style="height: 1px; background-color: white"></div>
+</body>
+</html>
