@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen con efecto</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0; /* Color de fondo del contenedor */
+    }
+
+    .contenedor {
+      position: relative;
+      overflow: hidden;
+      width: 300px; /* Ancho del contenedor */
+      height: 200px; /* Altura del contenedor */
+    }
+
+    .imagen {
+      position: absolute;
+      width: 100%; /* La imagen ocupará el 100% del contenedor */
+      height: 100%; /* La imagen ocupará el 100% del contenedor */
+      transition: transform 0.5s ease; /* Transición suave de 0.5 segundos */
+    }
+
+    .contenedor:hover .imagen {
+      transform: scale(1.5); /* La imagen se hace 1.5 veces más grande al pasar el ratón sobre el contenedor */
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <img src="tu-imagen.jpg" alt="Imagen">
+  </div>
+</body>
+</html>

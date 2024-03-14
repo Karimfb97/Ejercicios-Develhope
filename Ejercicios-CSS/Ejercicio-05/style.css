@@ -1,0 +1,119 @@
+body {
+    background-color: #3b3e43;
+    margin: 0;
+}
+
+nav {
+    background-color: #222529;
+    color: #9B9C9F;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.logo {
+    color: white;
+    margin-left: 90px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.categorias {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorias a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.categorias a:hover {
+    color: #408458;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown a {
+    color: grey;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(6px);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.dropdown-content a {
+    color: grey;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    color: #408458;
+}
+
+.busqueda {
+    margin-right: 90px;
+}
+
+input[type="text"] {
+    border: 1px solid #CFD5D9;
+    border-radius: 5px;
+    padding: 10px;
+    color: #6E757D;
+    font-size: 14px;
+}
+
+button {
+    border: 1px solid #408458;
+    border-radius: 5px;
+    background-color: #222529;
+    padding: 10px;
+    color: #408458;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #408458;
+    color: white;
+}
+
+/* línea blanca separa la barra del resto de la página */
+.separator {
+    height: 1px;
+    background-color: white;
+}

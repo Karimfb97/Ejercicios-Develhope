@@ -1,0 +1,183 @@
+@font-face{
+    font-family: "MyFont";
+    src: url(fuente/museo-sans-700.ttf) format("truetype");
+}
+
+
+
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.encabezado ul:hover{
+    background-color: red;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+.encabezado ul{
+
+    background-color: blue;
+    color: chocolate;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    margin: 0;
+    padding: 0;
+    font-family: "MyFont";
+}
+
+.container{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 1000px;
+    
+ 
+}
+
+.cuerpodch {
+    width: 49%;
+    
+    
+    float: right;
+}
+/*
+.formularios{
+    display: none;
+}
+.tablas{
+    display: none;
+}
+.imagenesdiv{
+    display: none;
+}
+*/
+h2{
+    font-family: "MyFont";
+    color: grey;
+}
+.marco{
+    border: 4px solid grey;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    font-family: "MyFont";
+    
+}
+legend{
+    font-family: "MyFont";
+    color: grey;
+    font-size: 16px;
+}
+.formulario{
+    font-family: "MyFont";
+    font-size: 20px;
+
+}
+form label{
+    display: flex;
+    justify-content:left;
+    padding: 5px;
+    margin: 5px;
+
+}
+form input{
+    display: flex;
+    justify-content: right;
+    padding: 5px;
+    margin: 5px;
+}
+form p{
+    margin-top: -10px;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    font-size: 30px;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+
+}
+.boton:hover{
+    background-color: blue;
+    color: white;
+    border:5px solid salmon;
+    border-radius: 0px;
+}
+
+table{
+ 
+    font-family: "MyFont";
+    font-size: 20px;
+    color: grey;
+    border: 8px solid grey;
+}
+th{
+    border: 8px solid black;
+}
+td{
+    border: 2px solid grey;
+    text-align: center;
+}
+
+.cuerpoizq {
+    float: left;
+    width: 50%;
+    height: 500px;
+    
+    grid-template-columns: 1fr 1fr;
+
+}
+.cuerpoizq img{
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.cuerpoizq img:hover{
+   
+    transform: scale(1.9);
+}
+
+
+.final{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "MyFont";
+    font-size: 20px;
+    color: grey;
+    height: 100px;
+    width: 100%;
+    
+}
+
+@media screen and ( max-width: 600px) {
+    .cuerpoizq img{
+        width: 100px;
+        height: 100px;
+        
+    }
+    .cuerpoizq {
+        width: 100%;
+        height: 500px;
+        position: relative;
+    }
+    .cuerpodch {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        float:left;
+    }
+}

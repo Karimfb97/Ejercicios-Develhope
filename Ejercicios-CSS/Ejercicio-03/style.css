@@ -1,0 +1,40 @@
+blockquote {
+	background-color: rgba(0, 0, 0, .12);
+	padding: 8px;
+}
+
+a {
+	color: darkred;
+	text-decoration: none;
+}
+
+.first::first-letter {
+    float: left;
+    color: darkred;
+    border: 3px ridge darkgoldenrod;
+    padding: 16px;
+    background-color: gold;
+    margin: 8px;
+	font-size: 3rem;
+}
+
+blockquote::before {
+    color: darkred;
+    content: open-quote;
+    font-size: 2rem;
+    line-height: 0.1;
+    vertical-align: -0.5rem;
+}
+
+blockquote::after {
+    color: darkred;
+    content: close-quote;
+    font-size: 2rem;
+    line-height: 0.1;
+    margin-left: 0.25rem;
+    vertical-align: -0.5rem;
+}
+
+a:hover {
+	color: peru;
+}
